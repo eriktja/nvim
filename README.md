@@ -1,5 +1,5 @@
 # Requirements
--- RipGrep
--- NerdFont
+- RipGrep
+- NerdFont
 
-Enjoy
+## Enjoy
