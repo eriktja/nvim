@@ -1,0 +1,5 @@
+# Requirements
+-- RipGrep
+-- NerdFont
+
+Enjoy
