@@ -12,54 +12,60 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-      'nvim-telescope/telescope.nvim',
-      tag = '0.1.6',
-      dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  { "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    config = function () 
-      local configs = require("nvim-treesitter.configs")
-
-      configs.setup({
-          ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
-          sync_install = false,
-          highlight = { enable = true },
-          indent = { enable = true },  
-        })
-    end
-},
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
-  }
-}
-
-local opts = {}
-
--- LAZY
-require("lazy").setup(plugins, opts)
+local plugins = {}
+--local plugins = {
+--      { 
+--          "catppuccin/nvim",
+--          lazy = false,
+--          name = "catppuccin",
+--          priority = 1000 
+--      },
+--      {
+--          'nvim-telescope/telescope.nvim',
+--          tag = '0.1.6',
+--          dependencies = { 'nvim-lua/plenary.nvim' }
+--      },
+--      { 
+--         "nvim-treesitter/nvim-treesitter",
+--          build = ":TSUpdate",
+--          config = function () 
+--          local configs = require("nvim-treesitter.configs")
+--
+--          configs.setup({
+--              ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
+--              sync_install = false,
+--              highlight = { enable = true },
+--              indent = { enable = true },  
+--            })
+--         end
+--      },
+--      {
+--          "nvim-neo-tree/neo-tree.nvim",
+--          branch = "v3.x",
+--          dependencies = {
+--            "nvim-lua/plenary.nvim",
+--            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+--            "MunifTanjim/nui.nvim",
+--            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+--        }
+--      }
+--}
 
 -- OPTIONS
 require("vim-options")
 
+-- LAZY
+require("lazy").setup("plugins")
+
+
 
 --TELESCOPE
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.find_files, {})
+--local builtin = require("telescope.builtin")
+--vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+--vim.keymap.set('n', '<leader>fg', builtin.find_files, {})
 
 
 --CATPPUCCIN
-require("catppuccin").setup()
+--require("catppuccin").setup()
 
-vim.cmd.colorscheme "catppuccin"
+--vim.cmd.colorscheme "catppuccin"
