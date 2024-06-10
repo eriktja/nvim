@@ -3,8 +3,9 @@
 - NerdFont
 
 Use :Lazy to setup
+
+## Recommend running to remove all old nvim setups
 ```Bash
-# Recommend running to remove all old nvim setups
 rm -rf ~/.local/share/nvim
 ```
 
