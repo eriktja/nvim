@@ -3,7 +3,11 @@
 - NerdFont
 
 Use :Lazy to setup
-
+Recommend running 
+```Bash
+rm -rf ~/.local/share/nvim
+```
+to remove all old nvim setups
 
 
 # Keys
