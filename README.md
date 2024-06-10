@@ -4,7 +4,7 @@
 
 Use :Lazy to setup
 
-## Recommend running to remove all old nvim setups
+## Recommended to remove old nvim setup
 ```Bash
 rm -rf ~/.local/share/nvim
 ```
