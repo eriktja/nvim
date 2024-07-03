@@ -15,6 +15,7 @@ return {
 					"pyright",
 					"clangd",
 					"rust_analyzer",
+          "angularls",
 				},
 			})
 		end,
@@ -41,15 +42,20 @@ return {
 				capabilities = capabilities,
 				cmd = { "rustup", "run", "stable", "rust-analyzer" },
 			})
+      lspconfig.angularls.setup({
+        capabilities = capabilities,
+      })
 
 			-- KEY BINDINGS
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
       vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
+      -- vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      -- vim.keymap.set("n", "]e", vim.lsp.diagnostic.goto_next, {})
+      -- vim.keymap.set("n", "[e", vim.lsp.diagnostic.goto_prev, {})
 		end,
 	},
 }
