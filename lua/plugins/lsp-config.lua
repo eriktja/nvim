@@ -54,8 +54,8 @@ return {
       -- vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-      -- vim.keymap.set("n", "]e", vim.lsp.diagnostic.goto_next, {})
-      -- vim.keymap.set("n", "[e", vim.lsp.diagnostic.goto_prev, {})
+      vim.keymap.set("n", "]e", vim.diagnostic.goto_next)
+      vim.keymap.set("n", "[e", vim.diagnostic.goto_prev)
 		end,
 	},
 }

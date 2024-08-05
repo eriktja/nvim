@@ -11,6 +11,6 @@ return {
 	-- keymap
 	vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal toggle left<CR>"),
 	vim.keymap.set("n", "<C-b>", ":Neotree buffers reveal toggle left<CR>"),
-	vim.keymap.set("n", "<C-g>", ":Neotree git_status reveal toggle right<CR>"),
+	-- vim.keymap.set("n", "<C-g>", ":Neotree git_status reveal toggle right<CR>"),
 	--vim.keymap.set("n", "<leader>g", ":Neotree git_status reveal toggle right<CR>"),
 }
